@@ -23,20 +23,18 @@ public class Guia8ej1 {
         CuentaBancariaServicio s1 = new CuentaBancariaServicio();
         CuentaBancaria nuevaCuenta = s1.crearCuenta();
 
-        System.out.println(nuevaCuenta);
         System.out.println(" ");
-        
+
         nuevaCuenta.setSaldoActual(s1.ingresar(nuevaCuenta.getSaldoActual()));
-        
-        System.out.println(nuevaCuenta);
-        
+
         nuevaCuenta.setSaldoActual(s1.retirar(nuevaCuenta.getSaldoActual()));
         System.out.println(" ");
-        System.out.println(nuevaCuenta);
-        
+
         nuevaCuenta.setSaldoActual(s1.extraccionRapida(nuevaCuenta.getSaldoActual()));
         System.out.println(" ");
-        System.out.println(nuevaCuenta);
+
+        s1.consultarSaldo(nuevaCuenta.getSaldoActual());
+        s1.consultarDatos(nuevaCuenta.getNumeroCuenta(), nuevaCuenta.getDniCliente(), nuevaCuenta.getSaldoActual());
     }
 
 }

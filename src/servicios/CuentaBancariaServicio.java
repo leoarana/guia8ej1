@@ -65,11 +65,30 @@ public class CuentaBancariaServicio {
             a = leer.nextDouble();
 
             if (a <= (saldo * 0.2)) {
-                a = saldo - a;}
-            else{System.out.println("el monto ingresado no puede ser retirado");b= 1;}
+                a = saldo - a;
+            } else {
+                System.out.println("el monto ingresado no puede ser retirado");
+                b = 1;
+            }
 
         } while (b > 0);
 
         return a;
     }
+
+    public void consultarSaldo(double saldo) {
+
+        System.out.println("su saldo es $" + saldo);
+
+    }
+
+    public void consultarDatos(int cuenta, long dni, double saldo) {
+
+        System.out.println(" ");
+        System.out.println("su numero de cuenta es " + cuenta);
+        System.out.println("su dni es " + dni);
+        System.out.println("su saldo es $" + saldo);
+        System.out.println(" ");
+    }
+
 }
