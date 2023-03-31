@@ -19,6 +19,14 @@ public class CuentaBancaria {
     public CuentaBancaria() {
     }
 
+    public CuentaBancaria(int numeroCuenta, long dniCliente, double saldoActual) {
+        this.numeroCuenta = numeroCuenta;
+        this.dniCliente = dniCliente;
+        this.saldoActual = saldoActual;
+    }
+
+    
+    
     public int getNumeroCuenta() {
         return numeroCuenta;
     }
